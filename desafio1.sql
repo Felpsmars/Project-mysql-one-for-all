@@ -129,7 +129,7 @@ VALUES
 	(10, 1),
 	(10, 4);
 
-INSERT INTO `cancoes`(`nome_cancao`, `duracao_cancao`, `album_id`)
+INSERT INTO `cancoes`(`nome_cancao`, `album_id`, `duracao_cancao`)
 VALUES
 
   ('Soul For Us', 1, 200),
