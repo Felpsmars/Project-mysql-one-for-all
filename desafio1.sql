@@ -57,7 +57,7 @@ CREATE TABLE `historico` (
   `usuario_id` INT NOT NULL,
   `cancao_id` INT NOT NULL,
   `data_reproducao` DATETIME NOT NULL,
-  PRIMARY KEY (`cancao_id`, `usuario_id`),
+  PRIMARY KEY (`usuario_id`, `cancao_id`),
   FOREIGN KEY (`usuario_id`) REFERENCES `usuario`(`usuario_id`),
   FOREIGN KEY (`cancao_id`) REFERENCES `cancoes`(`cancao_id`)
 ) engine=InnoDB;
@@ -71,16 +71,16 @@ VALUES
 
 INSERT INTO `usuario`(`nome_usuario`, `idade_usuario`, `plano_id`, `data_assinatura`)
 VALUES
-	('Cintia', 35, 2, '2017-12-30'),
 	('Thati', 23, 1, '2019-10-20'),
-	('Roger', 45, 4, '2020-05-13'),
+	('Cintia', 35, 2, '2017-12-30'),
 	('Bill', 20, 3, '2019-06-05'),
-	('Patrick', 33, 2, '2017-01-06'),
+	('Roger', 45, 4, '2020-05-13'),
 	('Norman', 58, 4, '2017-02-17'),
-	('Carol', 19, 3, '2018-02-14'),
+	('Patrick', 33, 2, '2017-01-06'),
 	('Vivian', 26, 3, '2018-01-05'),
-	('Paul', 46, 2, '2017-01-17'),
-	('Angelina', 42, 2, '2018-04-29');
+	('Carol', 19, 3, '2018-02-14'),
+	('Angelina', 42, 2, '2018-04-29'),
+	('Paul', 46, 2, '2017-01-17');
 
 INSERT INTO `artista`(`nome_artista`)
 VALUES 
@@ -101,7 +101,7 @@ VALUES
 	('Cabinet of fools', 5, 2012),
 	('Envious', 6, 1990),
 	('No guarantees', 5, 2015),
-    ('Apparatus', 1, 2015),
+  ('Apparatus', 1, 2015),
 	('Library of liberty', 2, 2003);
 
 INSERT INTO `seguidores`(`usuario_id`, `artista_id`)
@@ -131,46 +131,47 @@ VALUES
 
 INSERT INTO `cancoes`(`nome_cancao`, `duracao_cancao`, `album_id`)
 VALUES
-  ('Time Fireworks',152,2),
-  ("Honey, I'm A Lone Wolf",150,7),
-  ('Honey, So Do I',207,3),
-  ('Sweetie, Let`s Go Wild',139,3),
-  ('You Cheated On Me',95,10),
-  ('I Know I Know',117,8),
-  ('Wouldn`t It Be Nice',213,10),
-  ('Rock His Everything',223,4),
-  ('Home Forever',231,4),
-  ('Diamond Power',241,4),
-  ("Let's Be Silly",132,4),
-  ('Words Of Her Life',185,5),
-  ('Reflections Of Magic',163,1),
-  ('She Knows',244,3),
-  ('Without My Streets',176,5),
-  ('Need Of The Evening',190,6),
-  ('History Of My Roses',222,6),
-  ('Dance With Her Own',116,1),
-  ('Walking And Game',123,6),
-  ('Young And Father',197,6),
-  ('Finding My Traditions',179,7),
-  ('Thang Of Thunder',240,5),
-  ('Walking And Man',229,7),
-  ('Hard And Time',135,7),
-  ('She Thinks I Won`t Stay Tonight',166,8),
-  ('He Heard You`re Bad For Me',154,8),
-  ('Celebration Of More',146,4),
-  ('He Hopes We Can`t Stay',210,8),
-  ('Without My Love',111,6),
-  ('Magic Circus',105,3),
-  ('He`s Trouble',138,9),
-  ('Fantasy For Me',100,4),
-  ('I Heard I Want To Bo Alone',120,9),
-  ('I Ride Alone',151,9),
-  ('Soul For Us',200,1),
-  ('Honey',79,10),
-  ('He`s Walking Away',159,9),
-  ('Baby',136,10),
-  ('Troubles Of My Inner Fire',203,2),
-  ('You Make Me Feel So..',83,10);
+
+  ('Soul For Us', 1, 200),
+  ('Reflection Of Magic', 1, 163),
+  ('Dance With Her One', 1, 116),
+  ('Troubles Of My Inner Fire', 2, 203),
+  ('Time Fireworks', 2, 152),
+  ('Magic Circus', 3, 105),
+  ('Honey, So Do I', 3, 207),
+  ("Sweetie, Let's Go Wild", 3, 139),
+  ('She Knows', 3, 244),
+  ('Fantasy For Me', 4, 100),
+  ('Celebration Of More', 4, 146),
+  ('Rock His Everything', 4, 223),
+  ('Home Forever', 4, 231),
+  ('Diamond Power', 4, 241),
+  ("Let's Be Silly", 4, 132),
+  ('Thang Of Thunder', 5, 240),
+  ('Words Of Her Life', 5, 185),
+  ('Without My Streets', 5, 176),
+  ('Need Of The Evening', 6, 190),
+  ('History Of My Roses', 6, 222),
+  ('Without My Love', 6, 111),
+  ('Walking And Game', 6, 123),
+  ('Young And Father', 6, 197),
+  ('Finding My Traditions', 7, 179),
+  ('Walking And Man', 7, 229),
+  ('Hard And Time', 7, 135),
+  ("Honey, I'm A Lone Wolf", 7, 150),
+  ("She Thinks I Won't Stay Tonight", 8, 166),
+  ("He Heard You're Bad For Me", 8, 154),
+  ("He Hopes We Can't Stay", 8, 210),
+  ('I Know I Know', 8, 117),
+  ("He's Walking Away", 9, 159),
+  ("He's Trouble", 9, 138),
+  ('I Heard I Want To Bo Alone', 9, 120), 
+  ('I Ride Alone', 9, 151),
+  ('Honey', 10, 79),
+  ('You Cheated On Me', 10, 95),
+  ("Wouldn't It Be Nice", 10, 213),
+  ('Baby', 10, 136),
+  ('You Make Me Feel So..', 10, 83);
 
 INSERT INTO `historico` (`usuario_id`, `cancao_id`, `data_reproducao`)
 VALUES
