@@ -5,7 +5,9 @@ SELECT
 FROM SpotifyClone.usuario AS usuario
     INNER JOIN SpotifyClone.historico AS historico
     ON usuario.usuario_id = historico.usuario_id
+    
     INNER JOIN SpotifyClone.cancoes AS cancoes
     ON cancoes.cancao_id = historico.cancao_id
+
     GROUP BY usuario.nome_usuario
     ORDER BY usuario.nome_usuario;
