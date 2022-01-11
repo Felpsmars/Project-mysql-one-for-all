@@ -65,9 +65,9 @@ CREATE TABLE `historico` (
 INSERT INTO `planos`(`nome_plano`, `valor_plano`)
 VALUES 
   ('gratuito', 0),
+  ('familiar', 7.99),
   ('universitário', 5.99),
-  ('pessoal', 6.99),
-  ('familiar', 7.99);
+  ('pessoal', 6.99);
 
 INSERT INTO `usuario`(`nome_usuario`, `idade_usuario`, `plano_id`, `data_assinatura`)
 VALUES
@@ -93,16 +93,16 @@ VALUES
 
 INSERT INTO `albuns`(`nome_album`, `artista_id`, `ano_lancamento`)
 VALUES
+	('Envious', 6, 1990),
 	('Exuberant', 6, 1993),
+	('Hallowed Steam', 4, 1995),
 	('Incandescent', 3, 1998),
 	('Temporary Culture', 2, 2001),
-	('Hallowed Steam', 4, 1995),
+	('Library of liberty', 2, 2003),
 	('Chained Down', 5, 2007),
 	('Cabinet of fools', 5, 2012),
-	('Envious', 6, 1990),
 	('No guarantees', 5, 2015),
-  ('Apparatus', 1, 2015),
-	('Library of liberty', 2, 2003);
+	('Apparatus', 1, 2015);
 
 INSERT INTO `seguidores`(`usuario_id`, `artista_id`)
 VALUES
