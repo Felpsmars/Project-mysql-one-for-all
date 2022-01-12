@@ -84,12 +84,12 @@ VALUES
 
 INSERT INTO `artista`(`nome_artista`)
 VALUES 
-  ('Freedie Shannon'),
   ('Fog'),
-  ('Peter Strong'),
+  ('Freedie Shannon'),
   ('Lance Day'),
-  ('Walter Phoenix'),
-  ('Tyler Isle');
+  ('Peter Strong'),
+  ('Tyler Isle'),
+  ('Walter Phoenix');
 
 INSERT INTO `albuns`(`nome_album`, `artista_id`, `ano_lancamento`)
 VALUES
