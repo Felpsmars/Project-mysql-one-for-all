@@ -1,10 +1,10 @@
 SELECT
 	usuario.nome_usuario AS usuario,
-(CASE
+CASE
 	WHEN MAX(YEAR(historico.data_reproducao)) = 2021
 	THEN 'Usuário ativa'
 	ELSE 'Usuário inativo'
-END) AS condicao_usuario
+END AS condicao_usuario
 FROM
 	SpotifyClone.usuario AS usuario,
     SpotifyClone.historico AS historico
