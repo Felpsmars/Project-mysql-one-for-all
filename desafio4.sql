@@ -2,7 +2,7 @@ SELECT
 	usuario.nome_usuario AS usuario,
 CASE
 	WHEN MAX(YEAR(historico.data_reproducao)) = 2021
-	THEN 'Usuário ativa'
+	THEN 'Usuário ativo'
 	ELSE 'Usuário inativo'
 END AS condicao_usuario
 FROM
